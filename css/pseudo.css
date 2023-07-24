@@ -1,0 +1,98 @@
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+}
+
+.container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.header {
+  padding: 50px 0;
+}
+
+.navigation-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+
+.navigation-list-link {
+  display: block;
+  min-width: 100px;
+  text-align: center;
+  padding: 12px 10px;
+  border-radius: 6px;
+  border: 1px solid #000000;
+  color: #000;
+}
+
+/* 
+  :hover
+  :focus
+  :active
+  :visited
+*/
+/* .navigation-list-link:hover,
+.navigation-list-link:focus {
+  color: #ffffff;
+  background-color: #000000;
+} */
+
+/* .navigation-list-link:active {
+  color: teal;
+} */
+
+/* .navigation-list-link:visited {
+  color: teal;
+} */
+
+/* 
+  ::first-line
+  ::first-letter
+  ::selection
+  */
+
+.description {
+  margin-bottom: 20px;
+}
+
+/* .description::first-line {
+  font-size: 24px;
+  color: tomato;
+} */
+
+/* ::selection {
+  color: teal;
+  background-color: tomato;
+} */

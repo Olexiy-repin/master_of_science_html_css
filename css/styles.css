@@ -1,0 +1,109 @@
+/* 
+Універсальний селектор
+Селектор тегу (елемента)
+Селектор id
+Селектор класу
+Селектор атрибута
+Селектор нащадка
+Дочірній селектор
+*/
+
+/* Універсальний селектор */
+/* * {
+  color: teal;
+} */
+
+/* Селектор тегу (елемента) */
+/* h1 {
+  color: tomato;
+}
+
+p {
+  color: teal;
+}
+
+a {
+  color: yellowgreen;
+} */
+
+/* Селектор id */
+/* #main-title {
+  color: teal;
+}
+
+#primary-description,
+#secondary-description {
+  color: tomato;
+} */
+
+/* Селектор класу */
+/* .description {
+  color: tomato;
+} */
+
+/* Селектор атрибута */
+/* [href='https://www.google.com/']
+{
+  color: teal;
+} */
+
+/* Селектор нащадка */
+/* .menu-link {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu .menu-link {
+  color: teal;
+}
+
+.secondary-menu .menu-link {
+  color: tomato;
+} */
+
+/* Дочірній селектор */
+/* .nav-list > li {
+  border: 1px solid #000000;
+} */
+
+/* Каскадність */
+/* .description {
+  color: teal;
+}
+
+.description {
+  color: tomato;
+} */
+
+/* 10 */
+/* .title {
+  color: teal;
+} */
+
+/* 100 */
+/* #main-title {
+  color: tomato;
+} */
+
+/* 1 */
+/* h1 {
+  color: yellowgreen;
+} */
+
+/* 2 */
+/* body h1 {
+  color: aqua;
+} */
+
+/* .description {
+  color: tomato;
+}
+
+body {
+  font-size: 24px;
+  color: teal;
+}
+
+.title {
+  font-size: 26px;
+} */

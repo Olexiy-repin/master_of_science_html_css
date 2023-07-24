@@ -1,0 +1,15 @@
+.rgb-block,
+.hex-block {
+  font-family: sans-serif;
+  padding: 10px;
+  height: 100px;
+  color: #fff;
+}
+
+.rgb-block {
+  background-color: rgb(255, 0, 0);
+}
+
+.hex-block {
+  background-color: #00ff00;
+}
