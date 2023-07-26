@@ -1,0 +1,57 @@
+/* ============= VARIABLES ============= */
+:root {
+  --primary-color: #111111;
+  --secondary-color: #ffffff;
+  --accent-color: #fd9222;
+}
+/* ============= /VARIABLES ============= */
+
+/* ============= COMMON STYLES ============= */
+.list {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+/* ============= /COMMON STYLES ============= */
+
+/* ============= PAGE HEADER ============= */
+.logotype {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: -0.54px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.logotype-text-italic {
+  font-style: italic;
+}
+
+.menu-link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.28px;
+  color: var(--primary-color);
+}
+
+.menu-link:hover,
+.menu-link:focus {
+  color: var(--accent-color);
+}
+/* ============= /PAGE HEADER ============= */
+
+/* ============= HERO ============= */
+
+/* ============= /HERO ============= */
