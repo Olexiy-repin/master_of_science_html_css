@@ -140,6 +140,31 @@ body {
   display: flex;
   column-gap: 14px;
 }
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  transition: border-color var(--transition-dur-and-func);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  border-color: rgba(253, 146, 34, 0.1);
+}
+
+.social-list-icon {
+  transition: fill var(--transition-dur-and-func);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--accent-color);
+}
 /* ============= /PAGE HEADER ============= */
 
 /* ================ HERO ================ */
@@ -186,6 +211,8 @@ body {
   margin-right: 14px;
   background-color: var(--accent-color);
   color: var(--secondary-color);
+  transition: color var(--transition-dur-and-func),
+    background-color var(--transition-dur-and-func);
 }
 
 .buy-now-btn:hover,
@@ -205,11 +232,14 @@ body {
   padding-right: 40px;
   border-radius: 100px;
   border: 1px solid #ffffff;
+  transition: color var(--transition-dur-and-func),
+    border-color var(--transition-dur-and-func);
 }
 
 .how-made-link:hover,
 .how-made-link:focus {
   color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .scroll-down-link {
@@ -222,6 +252,7 @@ body {
   letter-spacing: -0.42px;
   margin-left: auto;
   color: var(--secondary-color);
+  transition: color var(--transition-dur-and-func);
 }
 
 .scroll-down-link:hover,
@@ -229,7 +260,29 @@ body {
   color: var(--accent-color);
 }
 
+.scroll-down-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  transition: background-color var(--transition-dur-and-func);
+}
+
+.scroll-down-link:hover .scroll-down-icon-wrapper,
+.scroll-down-link:focus .scroll-down-icon-wrapper {
+  background-color: var(--accent-color);
+}
+
 .scroll-down-icon {
+  fill: var(--accent-color);
+  transition: fill var(--transition-dur-and-func);
+}
+
+.scroll-down-link:hover .scroll-down-icon,
+.scroll-down-link:focus .scroll-down-icon {
   fill: var(--secondary-color);
 }
 /* ================ /HERO ================ */
@@ -255,6 +308,17 @@ body {
 
 .benefits-list-item {
   flex-basis: calc((100% - 176px) / 3);
+}
+
+.benefits-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 365px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
 }
 
 .benefits-list-title {
@@ -477,6 +541,10 @@ body {
 /* ================ /BESTSELLERS ================ */
 
 /* ================ REVIEWS ================ */
+.reviews-title {
+  margin-bottom: 90px;
+}
+
 .reviews-list {
   display: flex;
   column-gap: 28px;
@@ -484,6 +552,7 @@ body {
 }
 
 .reviews-list-item {
+  position: relative;
   width: calc((100% - 56px) / 3);
   padding-top: 56px;
   padding-right: 24px;
@@ -493,6 +562,13 @@ body {
   border-radius: 15px;
   background: #ffffff;
   box-shadow: 0px 9.05px 100px 0px rgba(17, 17, 17, 0.03);
+}
+
+.reviews-list-avatar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .reviews-list-fullname {
@@ -526,6 +602,8 @@ body {
   border: 1px solid var(--accent-color);
   color: var(--primary-color);
   background-color: #ffffff;
+  transition: color var(--transition-dur-and-func),
+    background-color var(--transition-dur-and-func);
 }
 
 .leave-review-btn:hover,
