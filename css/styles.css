@@ -3,6 +3,7 @@
   --primary-color: #111111;
   --secondary-color: #ffffff;
   --accent-color: #fd9222;
+  --transition-dur-and-func: 250ms linear;
 }
 /* ============= /VARIABLES ============= */
 
@@ -126,6 +127,8 @@ body {
   line-height: 1.14;
   letter-spacing: -0.28px;
   color: var(--primary-color);
+
+  transition: color var(--transition-dur-and-func);
 }
 
 .menu-link:hover,
@@ -146,7 +149,13 @@ body {
   padding-left: 40px;
   padding-right: 40px;
   border-radius: 30px;
-  background: rgba(17, 17, 17, 0.6);
+  background-color: rgba(17, 17, 17, 0.6);
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.4),
+      rgba(17, 17, 17, 0.4)
+    ),
+    url('../images/hero/bg.jpg');
+  background-size: cover;
 }
 
 .hero-bottom-block {
@@ -218,6 +227,10 @@ body {
 .scroll-down-link:hover,
 .scroll-down-link:focus {
   color: var(--accent-color);
+}
+
+.scroll-down-icon {
+  fill: var(--secondary-color);
 }
 /* ================ /HERO ================ */
 
@@ -413,6 +426,38 @@ body {
   flex-basis: calc((100% - 32px) / 3);
 }
 
+.bestsellers-list-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.28px;
+  color: #fafafa;
+  padding: 178px 40px;
+  border-radius: 15px 15px 0px 0px;
+  background-image: linear-gradient(
+    161deg,
+    rgba(253, 253, 255, 0.1) 0%,
+    rgba(8, 2, 21, 0) 100%
+  );
+  backdrop-filter: blur(7.5px);
+  transform: translateY(100%);
+  transition: transform var(--transition-dur-and-func);
+}
+
+.bestsellers-list-item:hover .overlay {
+  transform: translateY(0%);
+}
+
 .bestsellers-list-caption {
   padding-top: 28px;
   padding-bottom: 28px;
@@ -489,3 +534,50 @@ body {
   background-color: var(--accent-color);
 }
 /* ================ /REVIEWS ================ */
+
+/* ================ BACKDROP ================ */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ================ /BACKDROP ================ */
+
+/* ================ MODAL WINDOW ================ */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 517px;
+  height: 794px;
+  background-color: var(--secondary-color);
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  line-height: 0;
+}
+
+.close-btn-icon {
+  stroke: var(--primary-color);
+}
+/* ================ /MODAL WINDOW ================ */

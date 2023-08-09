@@ -25,13 +25,14 @@
         <nav class="page-navigation">
           <a class="logotype link" href="./index.html">
             <span class="logotype-text-italic">simply</span>&nbsp;chocolate
-            <img
+            <svg
               class="logotype-icon"
-              src="./images/logo.svg"
-              alt="logotype"
               width="24"
               height="24"
-            />
+              aria-label="Simply chocolate logotype"
+            >
+              <use href="./images/icons/sprite.svg#icon-logo"></use>
+            </svg>
           </a>
           <ul class="menu list">
             <li class="menu-item">
@@ -48,35 +49,38 @@
         <ul class="social-list list">
           <li class="social-list-item">
             <a class="social-list-link" href="">
-              <img
+              <svg
                 class="social-list-icon"
-                src="./images/icons/facebook.svg"
-                alt="facebook icon"
                 width="24"
                 height="24"
-              />
+                aria-label="facebook icon"
+              >
+                <use href="./images/icons/sprite.svg#icon-facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="social-list-item">
             <a class="social-list-link" href="">
-              <img
+              <svg
                 class="social-list-icon"
-                src="./images/icons/instagram.svg"
-                alt="instagram icon"
                 width="24"
                 height="24"
-              />
+                aria-label="instagram icon"
+              >
+                <use href="./images/icons/sprite.svg#icon-instagram"></use>
+              </svg>
             </a>
           </li>
           <li class="social-list-item">
             <a class="social-list-link" href="">
-              <img
+              <svg
                 class="social-list-icon"
-                src="./images/icons/twitter.svg"
-                alt="twitter icon"
                 width="24"
                 height="24"
-              />
+                aria-label="twitter icon"
+              >
+                <use href="./images/icons/sprite.svg#icon-twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -94,13 +98,14 @@
           <a class="how-made-link link" href="#how-made">How it’s made</a>
           <a class="scroll-down-link link" href="">
             scroll down
-            <img
+            <svg
               class="scroll-down-icon"
-              src="./images/icons/scroll-down.svg"
-              alt="scroll down icon"
               width="22"
               height="22"
-            />
+              aria-label="scroll down icon"
+            >
+              <use href="./images/icons/sprite.svg#icon-scroll-down"></use>
+            </svg>
           </a>
         </div>
       </section>
@@ -379,33 +384,57 @@
           </h2>
           <ul class="bestsellers-list list">
             <li class="bestsellers-list-item">
-              <img
-                class="bestsellers-list-img"
-                src="./images/bestsellers/chocolate-with-nuts.jpg"
-                alt="chocolate with nuts"
-                width="368"
-                height="464"
-              />
+              <div class="bestsellers-list-img-wrapper">
+                <img
+                  class="bestsellers-list-img"
+                  src="./images/bestsellers/chocolate-with-nuts.jpg"
+                  alt="chocolate with nuts"
+                  width="368"
+                  height="464"
+                />
+                <p class="overlay">
+                  Chocolate with fruit is an unbeatable combination of two of
+                  the tastiest things in the world. This dessert combines
+                  delicate and aromatic chocolate with fresh and juicy fruits,
+                  creating a true poetry of taste.
+                </p>
+              </div>
               <h3 class="bestsellers-list-caption">CHOCOLATE WITH NUTS</h3>
             </li>
             <li class="bestsellers-list-item">
-              <img
-                class="bestsellers-list-img"
-                src="./images/bestsellers/chocolate-with-fruits.jpg"
-                alt="chocolate with fruits"
-                width="368"
-                height="464"
-              />
+              <div class="bestsellers-list-img-wrapper">
+                <img
+                  class="bestsellers-list-img"
+                  src="./images/bestsellers/chocolate-with-fruits.jpg"
+                  alt="chocolate with fruits"
+                  width="368"
+                  height="464"
+                />
+                <p class="overlay">
+                  Chocolate with fruit is an unbeatable combination of two of
+                  the tastiest things in the world. This dessert combines
+                  delicate and aromatic chocolate with fresh and juicy fruits,
+                  creating a true poetry of taste.
+                </p>
+              </div>
               <h3 class="bestsellers-list-caption">CHOCOLATE WITH FRUITS</h3>
             </li>
             <li class="bestsellers-list-item">
-              <img
-                class="bestsellers-list-img"
-                src="./images/bestsellers/dark-chocolate.jpg"
-                alt="dark chocolate"
-                width="368"
-                height="464"
-              />
+              <div class="bestsellers-list-img-wrapper">
+                <img
+                  class="bestsellers-list-img"
+                  src="./images/bestsellers/dark-chocolate.jpg"
+                  alt="dark chocolate"
+                  width="368"
+                  height="464"
+                />
+                <p class="overlay">
+                  Chocolate with fruit is an unbeatable combination of two of
+                  the tastiest things in the world. This dessert combines
+                  delicate and aromatic chocolate with fresh and juicy fruits,
+                  creating a true poetry of taste.
+                </p>
+              </div>
               <h3 class="bestsellers-list-caption">DARK CHOCOLATE</h3>
             </li>
           </ul>
@@ -463,7 +492,9 @@
               </p>
             </li>
           </ul>
-          <button class="leave-review-btn" type="button">Leave a review</button>
+          <button class="leave-review-btn" type="button" data-modal-open>
+            Leave a review
+          </button>
         </div>
       </section>
     </main>
@@ -532,5 +563,23 @@
         </nav>
       </div>
     </footer>
+
+    <!-- BACKDROP WITH MODAL WINDOW -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg
+            class="close-btn-icon"
+            width="28"
+            height="28"
+            aria-label="Modal window close icon"
+          >
+            <use href="./images/icons/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
