@@ -1,0 +1,113 @@
+@import './common.css';
+
+body {
+  background-color: tomato;
+}
+
+/* ========== MIN-WIDTH & MAX-WIDTH ========== */
+/* 400px + */
+/* @media (min-width: 400px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 768px + */
+/* @media (min-width: 768px) {
+  body {
+    background-color: yellowgreen;
+  }
+} */
+
+/* 0px - 767px */
+/* @media (max-width: 767px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* 0px - 499px */
+/* @media (max-width: 499px) {
+  body {
+    background-color: yellowgreen;
+  }
+} */
+
+/* ========== AND ========== */
+/* 
+768px + true
+0px - 1199px true
+*/
+
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* ========== OR ========== */
+/* 
+0px - 767px false
+1200px + false
+*/
+/* @media (max-width: 767px), (min-width: 1200px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* ========== TYPES ========== */
+/* 
+  all
+  screen 
+  print
+*/
+/* @media screen and (min-width: 768px) {
+  body {
+    background-color: teal;
+  }
+} */
+
+/* @media print {
+  .menu {
+    display: none;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .social-list {
+    display: none;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .sec {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+} */
+
+/* ========== ORIENTATION ========== */
+/* @media screen and (orientation: landscape) and (max-width: 767px) {
+  body {
+    background-color: teal;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  body {
+    background-color: yellowgreen;
+  }
+} */
