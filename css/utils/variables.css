@@ -1,0 +1,6 @@
+:root {
+  --primary-color: #111111;
+  --secondary-color: #ffffff;
+  --accent-color: #fd9222;
+  --transition-dur-and-func: 250ms linear;
+}

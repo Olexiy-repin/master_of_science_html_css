@@ -17,6 +17,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <!-- HEADER -->
@@ -46,6 +47,16 @@
             </li>
           </ul>
         </nav>
+        <button
+          class="mobile-menu-open-btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu-open-btn-icon" width="28" height="28">
+            <use href="./images/icons/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
         <ul class="social-list list">
           <li class="social-list-item">
             <a class="social-list-link" href="">
@@ -88,7 +99,7 @@
     </header>
     <main>
       <!-- HERO -->
-      <section class="hero container">
+      <!-- <section class="hero container">
         <h1 class="main-title">
           Treat yourself or a loved one to our finest ingredients for a moment
           of pure delight!
@@ -110,9 +121,9 @@
             </span>
           </a>
         </div>
-      </section>
+      </section> -->
       <!-- BENEFITS -->
-      <section class="benefits">
+      <!-- <section class="benefits">
         <div class="container benefits-container">
           <h2 hidden>Benefits of our chocolate</h2>
           <ul class="benefits-list list">
@@ -176,9 +187,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- INGREDIENTS -->
-      <section class="ingredients section">
+      <!-- <section class="ingredients section">
         <div class="container">
           <h2 class="section-title">
             It all adds up to one exceptional
@@ -257,9 +268,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- HOW IT`S MADE -->
-      <section class="how-made section" id="made">
+      <!-- <section class="how-made section" id="made">
         <div class="container">
           <h2 class="section-title">
             How it’s <span class="accent-color">made</span>?
@@ -301,9 +312,9 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- OUR PRODUCTS -->
-      <section class="products section">
+      <!-- <section class="products section">
         <div class="container">
           <h2 class="section-title">
             Our <span class="accent-color">products</span>
@@ -407,9 +418,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- BESTSELLERS -->
-      <section class="bestsellers section">
+      <!-- <section class="bestsellers section">
         <div class="container">
           <h2 class="section-title">
             <span class="accent-color">Top</span> sellers
@@ -471,9 +482,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- REVIEW -->
-      <section class="reviews section" id="reviews">
+      <!-- <section class="reviews section" id="reviews">
         <div class="container">
           <h2 class="section-title reviews-title">
             <span class="accent-color">Chocolate</span> is loved
@@ -528,10 +539,10 @@
             Leave a review
           </button>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- FOOTER -->
-    <footer>
+    <!-- <footer>
       <div>
         <h2><span>Chocolate</span> a delicious cure for a bad day</h2>
         <h3>Social networks</h3>
@@ -600,10 +611,10 @@
           </ul>
         </nav>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- BACKDROP WITH MODAL WINDOW -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
           <svg
@@ -689,8 +700,61 @@
           <button class="review-form-btn" type="submit">Send</button>
         </form>
       </div>
+    </div> -->
+
+    <div class="mobile-menu js-menu-container" id="mobile-menu">
+      <div class="container mobile-menu-container">
+        <button class="mobile-menu-close-btn js-close-menu" type="button">
+          <svg class="mobile-menu-close-icon" width="28" height="28">
+            <use href="./images/icons/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-list-item">
+              <a href="" class="mobile-menu-list-link">Home</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a href="" class="mobile-menu-list-link">How it’s made?</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a href="" class="mobile-menu-list-link">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="mobile-menu-social-list list">
+          <li class="mobile-menu-social-list-item">
+            <a href="" class="mobile-menu-social-list-link">
+              <svg class="mobile-menu-social-list-icon" width="24" height="24">
+                <use href="./images/icons/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a href="" class="mobile-menu-social-list-link">
+              <svg class="mobile-menu-social-list-icon" width="24" height="24">
+                <use href="./images/icons/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-list-item">
+            <a href="" class="mobile-menu-social-list-link">
+              <svg class="mobile-menu-social-list-icon" width="24" height="24">
+                <use href="./images/icons/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>
