@@ -63,6 +63,19 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* ============= /COMMON STYLES ============= */
 
 /* ================ COMPONENTS ================ */
@@ -663,48 +676,45 @@ body {
 
 /* ================ MODAL FORM ================ */
 .review-form-description {
-  max-width: 298px;
+  width: 298px;
   font-size: 24px;
   font-weight: 600;
-  line-height: 1.17;
-  letter-spacing: -0.72px;
+  line-height: 1.17; /* 116.667% */
+  letter-spacing: -0.03em;
   text-transform: uppercase;
+  color: #111111;
   margin-bottom: 40px;
-  color: var(--primary-color);
 }
 
-.review-form-field {
-  display: block;
+.review-form-field-wrapper {
   margin-bottom: 18px;
 }
 
-.review-form-field-desc {
+.review-form-label {
+  display: block;
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: -0.28px;
-  margin-bottom: 8px;
+  letter-spacing: -0.02em;
   color: rgba(64, 64, 64, 0.3);
+  margin-bottom: 8px;
 }
 
 .review-form-input-wrapper {
-  display: block;
   position: relative;
 }
 
 .review-form-input {
   width: 100%;
   height: 68px;
-  font-size: 24px;
-  border: 1.5px solid rgba(17, 17, 17, 0.05);
   border-radius: 13px;
+  border: 1.5px solid rgba(17, 17, 17, 0.05);
   padding-left: 62px;
   transition: border-color var(--transition-dur-and-func);
 }
 
 .review-form-input:focus {
   border-color: var(--accent-color);
-  outline-color: transparent;
-  outline-offset: 4px;
+  outline: transparent;
 }
 
 .review-form-input-icon {
@@ -720,79 +730,82 @@ body {
   stroke: var(--accent-color);
 }
 
-.review-form-message {
+.review-form-comment {
   width: 100%;
   height: 137px;
-  font-size: 24px;
-  resize: none;
   border-radius: 13px;
   border: 1.5px solid rgba(17, 17, 17, 0.05);
+  resize: none;
   padding: 22px 24px;
   transition: border-color var(--transition-dur-and-func);
 }
 
-.review-form-message:focus {
+.review-form-comment:focus {
   border-color: var(--accent-color);
-  outline-color: transparent;
-  outline-offset: 4px;
+  outline: transparent;
 }
 
-.review-form-message::placeholder {
+.review-form-comment::placeholder {
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: -0.36px;
+  letter-spacing: -0.02em;
   color: rgba(64, 64, 64, 0.3);
 }
 
-.review-form-checkbox-label {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: -0.28px;
-  color: rgba(64, 64, 64, 0.6);
+.review-form-checkbxo-wrapper {
   margin-bottom: 40px;
 }
 
-.review-form-checkbox {
-  position: absolute;
-  appearance: none;
+.review-form-checkbox-label {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: rgba(64, 64, 64, 0.6);
 }
 
 .review-form-own-checkbox {
-  fill: transparent;
-  cursor: pointer;
-  padding: 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
   border-radius: 6px;
   border: 1px solid rgba(17, 17, 17, 0.14);
+  fill: transparent;
+  cursor: pointer;
   margin-right: 12px;
 }
 
-.review-form-checkbox:checked + .review-form-own-checkbox {
-  fill: var(--secondary-color);
+.review-form-checkbox:checked
+  + .review-form-checkbox-label
+  > .review-form-own-checkbox {
   background-color: var(--accent-color);
+  fill: #ffffff;
 }
 
-.review-form-checkbox:focus + .review-form-own-checkbox {
+.review-form-checkbox:focus
+  + .review-form-checkbox-label
+  > .review-form-own-checkbox {
   outline: 2px solid rgba(0, 0, 255, 0.5);
 }
 
-.review-form-btn {
-  min-width: 118px;
-  padding: 14px;
+.review-form-submit {
+  min-width: 117px;
+  height: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 14px;
   font-weight: 600;
+  color: #ffffff;
   border: none;
   border-radius: 100px;
-  color: var(--secondary-color);
   background-color: var(--accent-color);
-  transition: color var(--transition-dur-and-func),
-    background-color var(--transition-dur-and-func);
+  transition: background-color var(--transition-dur-and-func),
+    color var(--transition-dur-and-func);
 }
 
-.review-form-btn:hover,
-.review-form-btn:focus {
+.review-form-submit:hover,
+.review-form-submit:focus {
   background-color: #fcf1e0;
   color: var(--accent-color);
 }
